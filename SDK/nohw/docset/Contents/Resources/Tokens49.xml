@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/PPHTokenizedCustomerInformation.html">
+	<File path="Classes/PPHReceiptOption.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/PPHTokenizedCustomerInformation</TokenIdentifier>
-			<Abstract type="html">PayPal card processing returns some extremely useful data for receipts and/or loyalty programs. (Checkin has this stuff built in)</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/PPHReceiptOption</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
             
 			
 			<NodeRef refid="49"/>
@@ -13,149 +13,122 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/setCustomerId:</TokenIdentifier>
-			<Abstract type="html">An opaque identifier for this card which is distinct from any customerId from checkin and unique across cards for a particular merchant.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/initWithBlock:predicate:buttonLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *customerId</Declaration>
+			<Declaration>- (instancetype)initWithBlock:(PPHReceiptOptionBlock)optionBlock predicate:(PPHReceiptOptionPredicateBlock)shouldShowOption buttonLabel:(NSString *)buttonLabel</Declaration>
 			
 			
-			<Anchor>//api/name/customerId</Anchor>
+			<Anchor>//api/name/initWithBlock:predicate:buttonLabel:</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/customerId</TokenIdentifier>
-			<Abstract type="html">An opaque identifier for this card which is distinct from any customerId from checkin and unique across cards for a particular merchant.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/setOptionButtonLabelText:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *customerId</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *optionButtonLabelText</Declaration>
 			
 			
-			<Anchor>//api/name/customerId</Anchor>
+			<Anchor>//api/name/optionButtonLabelText</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/PPHTokenizedCustomerInformation/customerId</TokenIdentifier>
-			<Abstract type="html">An opaque identifier for this card which is distinct from any customerId from checkin and unique across cards for a particular merchant.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/optionButtonLabelText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *customerId</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *optionButtonLabelText</Declaration>
 			
 			
-			<Anchor>//api/name/customerId</Anchor>
+			<Anchor>//api/name/optionButtonLabelText</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/setMaskedEmailAddress:</TokenIdentifier>
-			<Abstract type="html">If availble, a masked email address for confirmation of identity or display for receipt destination.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHReceiptOption/optionButtonLabelText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *maskedEmailAddress</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *optionButtonLabelText</Declaration>
 			
 			
-			<Anchor>//api/name/maskedEmailAddress</Anchor>
+			<Anchor>//api/name/optionButtonLabelText</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/maskedEmailAddress</TokenIdentifier>
-			<Abstract type="html">If availble, a masked email address for confirmation of identity or display for receipt destination.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/setOptionBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *maskedEmailAddress</Declaration>
+			<Declaration>@property (nonatomic, strong) PPHReceiptOptionBlock optionBlock</Declaration>
 			
 			
-			<Anchor>//api/name/maskedEmailAddress</Anchor>
+			<Anchor>//api/name/optionBlock</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/PPHTokenizedCustomerInformation/maskedEmailAddress</TokenIdentifier>
-			<Abstract type="html">If availble, a masked email address for confirmation of identity or display for receipt destination.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/optionBlock</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *maskedEmailAddress</Declaration>
+			<Declaration>@property (nonatomic, strong) PPHReceiptOptionBlock optionBlock</Declaration>
 			
 			
-			<Anchor>//api/name/maskedEmailAddress</Anchor>
+			<Anchor>//api/name/optionBlock</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/setMaskedMobileNumber:</TokenIdentifier>
-			<Abstract type="html">If availble, a masked mobile phone number for confirmation of identity or display for receipt destination.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHReceiptOption/optionBlock</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *maskedMobileNumber</Declaration>
+			<Declaration>@property (nonatomic, strong) PPHReceiptOptionBlock optionBlock</Declaration>
 			
 			
-			<Anchor>//api/name/maskedMobileNumber</Anchor>
+			<Anchor>//api/name/optionBlock</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/maskedMobileNumber</TokenIdentifier>
-			<Abstract type="html">If availble, a masked mobile phone number for confirmation of identity or display for receipt destination.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/setShouldShowOption:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *maskedMobileNumber</Declaration>
+			<Declaration>@property (nonatomic, strong) PPHReceiptOptionPredicateBlock shouldShowOption</Declaration>
 			
 			
-			<Anchor>//api/name/maskedMobileNumber</Anchor>
+			<Anchor>//api/name/shouldShowOption</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/PPHTokenizedCustomerInformation/maskedMobileNumber</TokenIdentifier>
-			<Abstract type="html">If availble, a masked mobile phone number for confirmation of identity or display for receipt destination.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHReceiptOption/shouldShowOption</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *maskedMobileNumber</Declaration>
+			<Declaration>@property (nonatomic, strong) PPHReceiptOptionPredicateBlock shouldShowOption</Declaration>
 			
 			
-			<Anchor>//api/name/maskedMobileNumber</Anchor>
+			<Anchor>//api/name/shouldShowOption</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/setReceiptPreferenceToken:</TokenIdentifier>
-			<Abstract type="html">A token to be provided to the server to send a receipt to the saved destination or to associate an email address with this card
-for future transactions.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHReceiptOption/shouldShowOption</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHReceiptOption.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSString *receiptPreferenceToken</Declaration>
-			
-			
-			<Anchor>//api/name/receiptPreferenceToken</Anchor>
-            <NodeRef refid="49"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PPHTokenizedCustomerInformation/receiptPreferenceToken</TokenIdentifier>
-			<Abstract type="html">A token to be provided to the server to send a receipt to the saved destination or to associate an email address with this card
-for future transactions.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSString *receiptPreferenceToken</Declaration>
+			<Declaration>@property (nonatomic, strong) PPHReceiptOptionPredicateBlock shouldShowOption</Declaration>
 			
 			
-			<Anchor>//api/name/receiptPreferenceToken</Anchor>
-            <NodeRef refid="49"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/PPHTokenizedCustomerInformation/receiptPreferenceToken</TokenIdentifier>
-			<Abstract type="html">A token to be provided to the server to send a receipt to the saved destination or to associate an email address with this card
-for future transactions.</Abstract>
-			<DeclaredIn>PPHTokenizedCustomerInformation.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSString *receiptPreferenceToken</Declaration>
-			
-			
-			<Anchor>//api/name/receiptPreferenceToken</Anchor>
+			<Anchor>//api/name/shouldShowOption</Anchor>
             <NodeRef refid="49"/>
 		</Token>
 		

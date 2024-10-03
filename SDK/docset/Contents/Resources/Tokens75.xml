@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/PPHTransactionControlActionType.html">
+	<File path="Constants/PPHChipAndPinButtonType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/PPHTransactionControlActionType</TokenIdentifier>
-			<Abstract type="html">The Payment Events we&apos;ll send to the app.  These are currently a simple enum.</Abstract>
-			<DeclaredIn>PPHTransactionControllerDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/PPHChipAndPinButtonType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHChipAndPinEvent.h</DeclaredIn>
             
 			
 			<NodeRef refid="75"/>
@@ -14,26 +14,55 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHTransactionType_Handled</TokenIdentifier>
-            <Abstract type="html">Use this return value to indicate that the application has taken over transaction
-     </Abstract>
-            <Declaration>ePPHTransactionType_Handled</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHChipAndPinButtonUnknown</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHChipAndPinButtonUnknown</Declaration>
             
-            <DeclaredIn>PPHTransactionControllerDelegate.h</DeclaredIn>
+            <DeclaredIn>PPHChipAndPinEvent.h</DeclaredIn>
             
             <NodeRef refid="75"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHTransactionType_Continue</TokenIdentifier>
-            <Abstract type="html">Use this value to indicate that the SDK should continue with the transaction
-     </Abstract>
-            <Declaration>ePPHTransactionType_Continue</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHChipAndPinButtonKeyPadDigit</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHChipAndPinButtonKeyPadDigit</Declaration>
             
-            <DeclaredIn>PPHTransactionControllerDelegate.h</DeclaredIn>
+            <DeclaredIn>PPHChipAndPinEvent.h</DeclaredIn>
             
             <NodeRef refid="75"/>
         </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHChipAndPinButtonBack</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHChipAndPinButtonBack</Declaration>
+            
+            <DeclaredIn>PPHChipAndPinEvent.h</DeclaredIn>
+            
+            <NodeRef refid="75"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHChipAndPinButtonCancel</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHChipAndPinButtonCancel</Declaration>
+            
+            <DeclaredIn>PPHChipAndPinEvent.h</DeclaredIn>
+            
+            <NodeRef refid="75"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHChipAndPinButtonOK</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHChipAndPinButtonOK</Declaration>
+            
+            <DeclaredIn>PPHChipAndPinEvent.h</DeclaredIn>
+            
+            <NodeRef refid="75"/>
+        </Token>
+        
         
 	</File>
 </Tokens>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/PPHLocationStatus.html">
+	<File path="Constants/PPHAccountStatus.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/PPHLocationStatus</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/c/tdef/PPHAccountStatus</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>PPHLocation.h</DeclaredIn>
+			<DeclaredIn>PPHAccessAccount.h</DeclaredIn>
             
 			
 			<NodeRef refid="70"/>
@@ -14,34 +14,55 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHLocationStatusUnknown</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccountStatusUnknown</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>ePPHLocationStatusUnknown</Declaration>
+            <Declaration>ePPHAccountStatusUnknown</Declaration>
             
-            <DeclaredIn>PPHLocation.h</DeclaredIn>
+            <DeclaredIn>PPHAccessAccount.h</DeclaredIn>
             
             <NodeRef refid="70"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHLocationStatusActive</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccountStatusReady</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>ePPHLocationStatusActive</Declaration>
+            <Declaration>ePPHAccountStatusReady</Declaration>
             
-            <DeclaredIn>PPHLocation.h</DeclaredIn>
+            <DeclaredIn>PPHAccessAccount.h</DeclaredIn>
             
             <NodeRef refid="70"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHLocationStatusDeleted</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccountStatusRestricted</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>ePPHLocationStatusDeleted</Declaration>
+            <Declaration>ePPHAccountStatusRestricted</Declaration>
             
-            <DeclaredIn>PPHLocation.h</DeclaredIn>
+            <DeclaredIn>PPHAccessAccount.h</DeclaredIn>
             
             <NodeRef refid="70"/>
         </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccountStatusEligible</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHAccountStatusEligible</Declaration>
+            
+            <DeclaredIn>PPHAccessAccount.h</DeclaredIn>
+            
+            <NodeRef refid="70"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccountStatusIneligible</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHAccountStatusIneligible</Declaration>
+            
+            <DeclaredIn>PPHAccessAccount.h</DeclaredIn>
+            
+            <NodeRef refid="70"/>
+        </Token>
+        
         
 	</File>
 </Tokens>

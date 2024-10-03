@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/PPHLoggingDelegate.html">
+	<File path="Protocols/PPHAnalyticsDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/PPHLoggingDelegate</TokenIdentifier>
-			<Abstract type="html">For debugging purposes it can be helpful to see our internal logs.
-Implement this protocol and set the logging delegate on PayPalHereSDK.
-You should generally not set this delegate in production code as it will
-have a theoretical performance impact (we&apos;ll call respondsToSelector a lot).
-If you respond to a given selector, we&apos;ll put the message together, which will
-cause a bunch of string munging to happen. So basically, use this when you
-mean it, not just on a whim.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/PPHAnalyticsDelegate</TokenIdentifier>
+			<Abstract type="html">PPHAnalyticsDelegate is in charge of delivering analytics events to a server</Abstract>
+			<DeclaredIn>PPHAnalyticsDelegate.h</DeclaredIn>
             
 			
 			<NodeRef refid="60"/>
@@ -19,150 +13,71 @@ mean it, not just on a whim.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereError:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be indicative of an error.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/PPHAnalyticsDelegate/beginSession:</TokenIdentifier>
+			<Abstract type="html">Start an analytics session - create any sort of visitor/device identifiers etc.</Abstract>
+			<DeclaredIn>PPHAnalyticsDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereError:(id)message</Declaration>
+			<Declaration>- (void)beginSession:(NSDictionary *)properties</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
+					<Name>properties</Name>
+					<Abstract type="html">session-wide information about the session</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/logPayPalHereError:</Anchor>
+			<Anchor>//api/name/beginSession:</Anchor>
             <NodeRef refid="60"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereWarning:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be a potential issue affecting proper function.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/PPHAnalyticsDelegate/amendSession:</TokenIdentifier>
+			<Abstract type="html">Update session information of an in progress session</Abstract>
+			<DeclaredIn>PPHAnalyticsDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereWarning:(id)message</Declaration>
+			<Declaration>- (void)amendSession:(NSDictionary *)properties</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
+					<Name>properties</Name>
+					<Abstract type="html">session-wide information about the session</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/logPayPalHereWarning:</Anchor>
+			<Anchor>//api/name/amendSession:</Anchor>
             <NodeRef refid="60"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereInfo:</TokenIdentifier>
-			<Abstract type="html">Log informational events.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/PPHAnalyticsDelegate/endSession</TokenIdentifier>
+			<Abstract type="html">End an analytics session - clear any identifiers</Abstract>
+			<DeclaredIn>PPHAnalyticsDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereInfo:(id)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>- (void)endSession</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereInfo:</Anchor>
+			
+			<Anchor>//api/name/endSession</Anchor>
             <NodeRef refid="60"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereTrace:</TokenIdentifier>
-			<Abstract type="html">Log fxn tracing events.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/PPHAnalyticsDelegate/queueEvent:withType:andInfo:</TokenIdentifier>
+			<Abstract type="html">Log an analytics event</Abstract>
+			<DeclaredIn>PPHAnalyticsDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereTrace:(id)message</Declaration>
+			<Declaration>- (void)queueEvent:(PPHAnalyticsEventName)event withType:(PPHAnalyticsEventType)type andInfo:(NSDictionary *)info</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
+					<Name>event</Name>
+					<Abstract type="html">the name of the event that has occurred</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">the type of event that has occurred</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">additional information about the event</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/logPayPalHereTrace:</Anchor>
-            <NodeRef refid="60"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereDebug:</TokenIdentifier>
-			<Abstract type="html">Log debug/verbose events.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
-			
-			<Declaration>- (void)logPayPalHereDebug:(id)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/logPayPalHereDebug:</Anchor>
-            <NodeRef refid="60"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereHardwareError:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be indicative of an error for hardware interactions.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
-			
-			<Declaration>- (void)logPayPalHereHardwareError:(id)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/logPayPalHereHardwareError:</Anchor>
-            <NodeRef refid="60"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereHardwareWarning:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be a potential issue affecting proper function for hardware interactions.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
-			
-			<Declaration>- (void)logPayPalHereHardwareWarning:(id)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/logPayPalHereHardwareWarning:</Anchor>
-            <NodeRef refid="60"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereHardwareInfo:</TokenIdentifier>
-			<Abstract type="html">Log informational events for hardware interactions.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
-			
-			<Declaration>- (void)logPayPalHereHardwareInfo:(id)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/logPayPalHereHardwareInfo:</Anchor>
-            <NodeRef refid="60"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/flush</TokenIdentifier>
-			<Abstract type="html">Cause the logger to send all its queued messages now.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
-			
-			<Declaration>- (void)flush</Declaration>
-			
-			
-			<Anchor>//api/name/flush</Anchor>
+			<Anchor>//api/name/queueEvent:withType:andInfo:</Anchor>
             <NodeRef refid="60"/>
 		</Token>
 		

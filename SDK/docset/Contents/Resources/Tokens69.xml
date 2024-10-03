@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/PPHLocationCheckinType.html">
+	<File path="Constants/PPHAccessResultType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/PPHLocationCheckinType</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>PPHLocation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/PPHAccessResultType</TokenIdentifier>
+			<Abstract type="html">Indicates whether all the information regarding the logged in merchant was
+successfully retrieved by the backend and the merchant setup was succcessful.</Abstract>
+			<DeclaredIn>PPHAccessResultType.h</DeclaredIn>
             
 			
 			<NodeRef refid="69"/>
@@ -14,24 +15,27 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinTypeNone</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinTypeNone</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccessResultSuccess</TokenIdentifier>
+            <Abstract type="html">If the merchant setup was successful.
+     </Abstract>
+            <Declaration>ePPHAccessResultSuccess</Declaration>
             
-            <DeclaredIn>PPHLocation.h</DeclaredIn>
+            <DeclaredIn>PPHAccessResultType.h</DeclaredIn>
             
             <NodeRef refid="69"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinTypeStandard</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinTypeStandard</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAccessResultFailed</TokenIdentifier>
+            <Abstract type="html">If the merchant setup encountered an error.
+     </Abstract>
+            <Declaration>ePPHAccessResultFailed</Declaration>
             
-            <DeclaredIn>PPHLocation.h</DeclaredIn>
+            <DeclaredIn>PPHAccessResultType.h</DeclaredIn>
             
             <NodeRef refid="69"/>
         </Token>
+        
         
 	</File>
 </Tokens>

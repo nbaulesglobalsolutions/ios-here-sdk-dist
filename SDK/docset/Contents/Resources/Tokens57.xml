@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/PPHTransactionManagerDelegate.html">
+	<File path="Classes/PPHTransactionResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/PPHTransactionManagerDelegate</TokenIdentifier>
-			<Abstract type="html">The PPHTransactionManagerDelegate aids in communicating with the application layer by sending various
-messages throughout the payment flow. These messages reflect the different stages of a transaction
-and could be used by the application to display appropriate text, image or UI on the screen.</Abstract>
-			<DeclaredIn>PPHTransactionManagerDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/PPHTransactionResponse</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
             
 			
 			<NodeRef refid="57"/>
@@ -15,22 +13,114 @@ and could be used by the application to display appropriate text, image or UI on
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHTransactionManagerDelegate/onPaymentEvent:</TokenIdentifier>
-			<Abstract type="html">onPaymentEvent</Abstract>
-			<DeclaredIn>PPHTransactionManagerDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionResponse/setError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
 			
-			<Declaration>- (void)onPaymentEvent:(PPHTransactionManagerEvent *)event</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">: A PaymentEvent object the contains information about the event.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, strong) PPHError *error</Declaration>
 			
-			<Anchor>//api/name/onPaymentEvent:</Anchor>
+			
+			<Anchor>//api/name/error</Anchor>
             <NodeRef refid="57"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionResponse/error</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) PPHError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHTransactionResponse/error</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) PPHError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionResponse/setRecord:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) PPHTransactionRecord *record</Declaration>
+			
+			
+			<Anchor>//api/name/record</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionResponse/record</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) PPHTransactionRecord *record</Declaration>
+			
+			
+			<Anchor>//api/name/record</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHTransactionResponse/record</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) PPHTransactionRecord *record</Declaration>
+			
+			
+			<Anchor>//api/name/record</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionResponse/setIsSignatureRequiredToFinalize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL isSignatureRequiredToFinalize</Declaration>
+			
+			
+			<Anchor>//api/name/isSignatureRequiredToFinalize</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionResponse/isSignatureRequiredToFinalize</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL isSignatureRequiredToFinalize</Declaration>
+			
+			
+			<Anchor>//api/name/isSignatureRequiredToFinalize</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHTransactionResponse/isSignatureRequiredToFinalize</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PPHTransactionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL isSignatureRequiredToFinalize</Declaration>
+			
+			
+			<Anchor>//api/name/isSignatureRequiredToFinalize</Anchor>
+            <NodeRef refid="57"/>
+		</Token>
+		
+        
         
 	</File>
 </Tokens>

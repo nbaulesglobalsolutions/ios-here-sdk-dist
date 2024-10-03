@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/PPHLoggingDelegate.html">
+	<File path="Classes/PPHSupportedPaymentInterfaces.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/PPHLoggingDelegate</TokenIdentifier>
-			<Abstract type="html">For debugging purposes it can be helpful to see our internal logs.
-Implement this protocol and set the logging delegate on PayPalHereSDK.
-You should generally not set this delegate in production code as it will
-have a theoretical performance impact (we&apos;ll call respondsToSelector a lot).
-If you respond to a given selector, we&apos;ll put the message together, which will
-cause a bunch of string munging to happen. So basically, use this when you
-mean it, not just on a whim.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/PPHSupportedPaymentInterfaces</TokenIdentifier>
+			<Abstract type="html">PPHSupportedPaymentInterfaces represents the different payment interfaces a card reader supports.
+For example, if a card reader has a contactless payment interface, this means the card reader has
+some hardware capabilities to process contactless payments. Query this object for more detailed
+information on the payment acceptance capabilities of the current reader.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
             
 			
 			<NodeRef refid="52"/>
@@ -19,153 +16,204 @@ mean it, not just on a whim.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereError:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be indicative of an error.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/setSupportedPayments:</TokenIdentifier>
+			<Abstract type="html">All the different payment interfaces the card reader currently supports in the form of a
+bitmask. Please take a look at the public header PPHReaderPaymentInterfaces.h to understand the definition
+of the bitmask. Each bit position represents a payment. If the mask is on/set at that bit, then the card
+reader accepts that particular payment.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereError:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) PPHSupportedPaymentInterfaceMask supportedPayments</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereError:</Anchor>
+			
+			<Anchor>//api/name/supportedPayments</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereWarning:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be a potential issue affecting proper function.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/supportedPayments</TokenIdentifier>
+			<Abstract type="html">All the different payment interfaces the card reader currently supports in the form of a
+bitmask. Please take a look at the public header PPHReaderPaymentInterfaces.h to understand the definition
+of the bitmask. Each bit position represents a payment. If the mask is on/set at that bit, then the card
+reader accepts that particular payment.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereWarning:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) PPHSupportedPaymentInterfaceMask supportedPayments</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereWarning:</Anchor>
+			
+			<Anchor>//api/name/supportedPayments</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereInfo:</TokenIdentifier>
-			<Abstract type="html">Log informational events.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHSupportedPaymentInterfaces/supportedPayments</TokenIdentifier>
+			<Abstract type="html">All the different payment interfaces the card reader currently supports in the form of a
+bitmask. Please take a look at the public header PPHReaderPaymentInterfaces.h to understand the definition
+of the bitmask. Each bit position represents a payment. If the mask is on/set at that bit, then the card
+reader accepts that particular payment.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereInfo:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) PPHSupportedPaymentInterfaceMask supportedPayments</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereInfo:</Anchor>
+			
+			<Anchor>//api/name/supportedPayments</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereTrace:</TokenIdentifier>
-			<Abstract type="html">Log fxn tracing events.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/setSwipe:</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to quickly let you know if the card reader accepst swipe based payments</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereTrace:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) BOOL swipe</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereTrace:</Anchor>
+			
+			<Anchor>//api/name/swipe</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereDebug:</TokenIdentifier>
-			<Abstract type="html">Log debug/verbose events.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/swipe</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to quickly let you know if the card reader accepst swipe based payments</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereDebug:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) BOOL swipe</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereDebug:</Anchor>
+			
+			<Anchor>//api/name/swipe</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereHardwareError:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be indicative of an error for hardware interactions.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHSupportedPaymentInterfaces/swipe</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to quickly let you know if the card reader accepst swipe based payments</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereHardwareError:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) BOOL swipe</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereHardwareError:</Anchor>
+			
+			<Anchor>//api/name/swipe</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereHardwareWarning:</TokenIdentifier>
-			<Abstract type="html">Log a message considered to be a potential issue affecting proper function for hardware interactions.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/setContactless:</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to quickly let you know if the card reader supports some form of contactless
+payments. If you want more granular information on which flavor of contactless the reader supports
+please parse the bit mask</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereHardwareWarning:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) BOOL contactless</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereHardwareWarning:</Anchor>
+			
+			<Anchor>//api/name/contactless</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/logPayPalHereHardwareInfo:</TokenIdentifier>
-			<Abstract type="html">Log informational events for hardware interactions.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/contactless</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to quickly let you know if the card reader supports some form of contactless
+payments. If you want more granular information on which flavor of contactless the reader supports
+please parse the bit mask</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)logPayPalHereHardwareInfo:(NSString *)message</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>message</Name>
-					<Abstract type="html">The fully formatted log message.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) BOOL contactless</Declaration>
 			
-			<Anchor>//api/name/logPayPalHereHardwareInfo:</Anchor>
+			
+			<Anchor>//api/name/contactless</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/PPHLoggingDelegate/flush</TokenIdentifier>
-			<Abstract type="html">Cause the logger to send all its queued messages now.</Abstract>
-			<DeclaredIn>PPHLoggingDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHSupportedPaymentInterfaces/contactless</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to quickly let you know if the card reader supports some form of contactless
+payments. If you want more granular information on which flavor of contactless the reader supports
+please parse the bit mask</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
 			
-			<Declaration>- (void)flush</Declaration>
+			<Declaration>@property (nonatomic, readonly) BOOL contactless</Declaration>
 			
 			
-			<Anchor>//api/name/flush</Anchor>
+			<Anchor>//api/name/contactless</Anchor>
             <NodeRef refid="52"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/setChipAndPinEMV:</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to let you know if the device supports EMV based chip and dip payments.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL chipAndPinEMV</Declaration>
+			
+			
+			<Anchor>//api/name/chipAndPinEMV</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/chipAndPinEMV</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to let you know if the device supports EMV based chip and dip payments.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL chipAndPinEMV</Declaration>
+			
+			
+			<Anchor>//api/name/chipAndPinEMV</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHSupportedPaymentInterfaces/chipAndPinEMV</TokenIdentifier>
+			<Abstract type="html">Convenience boolean to let you know if the device supports EMV based chip and dip payments.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL chipAndPinEMV</Declaration>
+			
+			
+			<Anchor>//api/name/chipAndPinEMV</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/setSupportedTracks:</TokenIdentifier>
+			<Abstract type="html">Mask data to represent supported magStripe tracks on the current readers. Please take
+a look at the public header PPHMagStripeTracks.h to read the mask.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PPHMagStripeTracksMask supportedTracks</Declaration>
+			
+			
+			<Anchor>//api/name/supportedTracks</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHSupportedPaymentInterfaces/supportedTracks</TokenIdentifier>
+			<Abstract type="html">Mask data to represent supported magStripe tracks on the current readers. Please take
+a look at the public header PPHMagStripeTracks.h to read the mask.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PPHMagStripeTracksMask supportedTracks</Declaration>
+			
+			
+			<Anchor>//api/name/supportedTracks</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PPHSupportedPaymentInterfaces/supportedTracks</TokenIdentifier>
+			<Abstract type="html">Mask data to represent supported magStripe tracks on the current readers. Please take
+a look at the public header PPHMagStripeTracks.h to read the mask.</Abstract>
+			<DeclaredIn>PPHSupportedPaymentInterfaces.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PPHMagStripeTracksMask supportedTracks</Declaration>
+			
+			
+			<Anchor>//api/name/supportedTracks</Anchor>
+            <NodeRef refid="52"/>
+		</Token>
+		
+        
         
 	</File>
 </Tokens>

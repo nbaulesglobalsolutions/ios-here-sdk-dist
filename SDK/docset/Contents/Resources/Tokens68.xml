@@ -1,87 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/PPHLocationCheckinStatus.html">
+	<File path="Protocols/PPHTransactionManagerDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/PPHLocationCheckinStatus</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/PPHTransactionManagerDelegate</TokenIdentifier>
+			<Abstract type="html">The PPHTransactionManagerDelegate aids in communicating with the application layer by sending various
+messages throughout the payment flow. These messages reflect the different stages of a transaction
+and could be used by the application to display appropriate text, image or UI on the screen.</Abstract>
+			<DeclaredIn>PPHTransactionManagerDelegate.h</DeclaredIn>
             
 			
 			<NodeRef refid="68"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusUnknown</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusUnknown</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PPHTransactionManagerDelegate/onPaymentEvent:</TokenIdentifier>
+			<Abstract type="html">onPaymentEvent</Abstract>
+			<DeclaredIn>PPHTransactionManagerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)onPaymentEvent:(PPHTransactionManagerEvent *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">: A PaymentEvent object the contains information about the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/onPaymentEvent:</Anchor>
             <NodeRef refid="68"/>
-        </Token>
+		</Token>
+		
         
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusActive</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusActive</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
-            <NodeRef refid="68"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusCancelled</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusCancelled</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
-            <NodeRef refid="68"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusExpired</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusExpired</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
-            <NodeRef refid="68"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusPaid</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusPaid</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
-            <NodeRef refid="68"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusLeft</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusLeft</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
-            <NodeRef refid="68"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHCheckinStatusDeleted</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>ePPHCheckinStatusDeleted</Declaration>
-            
-            <DeclaredIn>PPHLocationCheckin.h</DeclaredIn>
-            
-            <NodeRef refid="68"/>
-        </Token>
         
 	</File>
 </Tokens>

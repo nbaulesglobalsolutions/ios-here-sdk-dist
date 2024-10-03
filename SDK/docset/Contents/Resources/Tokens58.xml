@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/PPHAccessResultType.html">
+	<File path="Classes/PPHTransactionWatcher.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/PPHAccessResultType</TokenIdentifier>
-			<Abstract type="html">Indicates whether all the information regarding the logged in merchant was
-successfully retrieved by the backend and the merchant setup was succcessful.</Abstract>
-			<DeclaredIn>PPHAccessResultType.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/PPHTransactionWatcher</TokenIdentifier>
+			<Abstract type="html">The PPHTransactionWatcher follows the standard PPHSDK &quot;Watcher&quot; pattern, translating
+NotificationCenter events into a delegate interface. A PPHTransactionWatcher &quot;watches&quot;
+the PPHTransactionManager, granting PPHSDK clients the ability to easily track its
+comings, goings, and doings.</Abstract>
+			<DeclaredIn>PPHTransactionWatcher.h</DeclaredIn>
             
 			
 			<NodeRef refid="58"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHAccessResultSuccess</TokenIdentifier>
-            <Abstract type="html">If the merchant setup was successful.
-     </Abstract>
-            <Declaration>ePPHAccessResultSuccess</Declaration>
-            
-            <DeclaredIn>PPHAccessResultType.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PPHTransactionWatcher/initWithDelegate:</TokenIdentifier>
+			<Abstract type="html">Initialize a watcher to send events to the delegate</Abstract>
+			<DeclaredIn>PPHTransactionWatcher.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithDelegate:(id&lt;PPHTransactionManagerDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">the receiver of transaction manager events</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithDelegate:</Anchor>
             <NodeRef refid="58"/>
-        </Token>
+		</Token>
+		
         
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHAccessResultFailed</TokenIdentifier>
-            <Abstract type="html">If the merchant setup encountered an error.
-     </Abstract>
-            <Declaration>ePPHAccessResultFailed</Declaration>
-            
-            <DeclaredIn>PPHAccessResultType.h</DeclaredIn>
-            
-            <NodeRef refid="58"/>
-        </Token>
         
 	</File>
 </Tokens>

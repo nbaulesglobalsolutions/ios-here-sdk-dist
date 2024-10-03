@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/PPHDisplayReader.html">
+	<File path="Constants/PPHAvailablePaymentTypes.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/PPHDisplayReader</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/c/tdef/PPHAvailablePaymentTypes</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>PPHReaderDisplayFormatter.h</DeclaredIn>
+			<DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
             
 			
 			<NodeRef refid="73"/>
@@ -14,21 +14,61 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHDisplayReaderUnknown</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAvailablePaymentTypeNone</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>ePPHDisplayReaderUnknown</Declaration>
+            <Declaration>ePPHAvailablePaymentTypeNone</Declaration>
             
-            <DeclaredIn>PPHReaderDisplayFormatter.h</DeclaredIn>
+            <DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
             
             <NodeRef refid="73"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/ePPHDisplayReaderM010</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAvailablePaymentTypeCard</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>ePPHDisplayReaderM010</Declaration>
+            <Declaration>ePPHAvailablePaymentTypeCard</Declaration>
             
-            <DeclaredIn>PPHReaderDisplayFormatter.h</DeclaredIn>
+            <DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
+            
+            <NodeRef refid="73"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAvailablePaymentTypeCheckin</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHAvailablePaymentTypeCheckin</Declaration>
+            
+            <DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
+            
+            <NodeRef refid="73"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAvailablePaymentTypeChip</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHAvailablePaymentTypeChip</Declaration>
+            
+            <DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
+            
+            <NodeRef refid="73"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAvailablePaymentTypeContactlessMSD</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHAvailablePaymentTypeContactlessMSD</Declaration>
+            
+            <DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
+            
+            <NodeRef refid="73"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ePPHAvailablePaymentTypeContactlessEMV</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ePPHAvailablePaymentTypeContactlessEMV</Declaration>
+            
+            <DeclaredIn>PPHPaymentConstants.h</DeclaredIn>
             
             <NodeRef refid="73"/>
         </Token>

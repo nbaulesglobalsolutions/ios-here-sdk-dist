@@ -177,5 +177,17 @@ Bug fix: Fixing the AU country code check, that was wrongly setting the availabl
 
 1.5.2
   What's new:
-  - [EMV Flow] Updated the SDK behavior when the processPaymentWithSDKUI is invoked before a chip & pin reader is connected over bluetooth. The
-               will now throw an error kPPHLocalErrorBadConfigurationNoEMVReaderConnected if a reader is not connected
+  - [EMV Flow] Updated the SDK behavior when the processPaymentWithSDKUI is invoked before a chip & pin reader is connected over bluetooth. The transaction manager will now throw an error kPPHLocalErrorBadConfigurationNoEMVReaderConnected if a reader is not connected
+
+1.6
+  What's new:
+  - All new payments APIs to implemenet accreditation compliant EMV payments.
+  - Many APIs and constants renamed to be more consistent and accurate.
+  - Support for new contactless M010 EMV readers.
+  - Please see migration document in the docs folder for more information.
+
+1.6.1
+  What's new:
+  - Fixed resource plist issue blocking app submission.
+  - Writeable invoice merchant reference number.
+  - `clearActiveMerchant` API to clear saved internal tokens and merchant info.
